@@ -7,12 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
+//#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [GMSServices provideAPIKey: @"AIzaSyARWz2KSI4nVhG3_MqsOJWB3mSILsJPPBc"];
+    
+    //[Parse setApplicationId:@"UhASMtfhfERP39kFsh7bEqJt2tcrk4ok3SkSl8pZ"
+      //            clientKey:@"REWIpitKEyZTEd8KSuvGicSvte2KlY6cFtCccOAe"];
+    
+    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
